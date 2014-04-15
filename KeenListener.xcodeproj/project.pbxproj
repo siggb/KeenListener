@@ -19,6 +19,8 @@
 		0B1449DC18FDB97400E5F037 /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DA18FDB97400E5F037 /* Pages.storyboard */; };
 		0B1449DF18FDBE7600E5F037 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DD18FDBE7600E5F037 /* Localizable.strings */; };
 		0B1449E018FDBE7600E5F037 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DD18FDBE7600E5F037 /* Localizable.strings */; };
+		0B89A0D418FDC54B00E04FBB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B89A0D318FDC54B00E04FBB /* README.md */; };
+		0B89A0D518FDC54B00E04FBB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B89A0D318FDC54B00E04FBB /* README.md */; };
 		0BABFDF218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFDF418FDB64B000A253C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF318FDB64B000A253C /* CoreGraphics.framework */; };
 		0BABFDF618FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
@@ -48,6 +50,7 @@
 		0B1449D018FDB8EB00E5F037 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B1449DA18FDB97400E5F037 /* Pages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pages.storyboard; sourceTree = "<group>"; };
 		0B1449DE18FDBE7600E5F037 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0B89A0D318FDC54B00E04FBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0BABFDEE18FDB64B000A253C /* KeenListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeenListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFDF118FDB64B000A253C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BABFDF318FDB64B000A253C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -203,6 +206,7 @@
 		0BABFDE518FDB64B000A253C = {
 			isa = PBXGroup;
 			children = (
+				0B89A0D318FDC54B00E04FBB /* README.md */,
 				0B1449B318FDB78700E5F037 /* Sources */,
 				0B1449B018FDB78700E5F037 /* Resources */,
 				0B1449C218FDB78700E5F037 /* Submodules */,
@@ -328,6 +332,7 @@
 			files = (
 				0B1449C318FDB78700E5F037 /* Images.xcassets in Resources */,
 				0B1449DF18FDBE7600E5F037 /* Localizable.strings in Resources */,
+				0B89A0D418FDC54B00E04FBB /* README.md in Resources */,
 				0B1449CB18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
 				0B1449DB18FDB97400E5F037 /* Pages.storyboard in Resources */,
 			);
@@ -337,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B89A0D518FDC54B00E04FBB /* README.md in Resources */,
 				0B1449E018FDBE7600E5F037 /* Localizable.strings in Resources */,
 				0B1449CC18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
 				0BABFE1B18FDB64B000A253C /* InfoPlist.strings in Resources */,
