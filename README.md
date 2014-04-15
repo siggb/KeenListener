@@ -2,7 +2,7 @@
 
 This project was created as a supplement to the final qualifying student work, titled "Interaction system for the speaker and listener on a mobile platform" ([Vladimir State University](http://vlsu.ru), specialty ID is 230101).
 
-Requires XCode 5 and iOS 7 iPhone or iPad. Project runs on the device or simulator.
+It is a server-side application for the interaction between speaker and listener through the web-browser. Speaker may download the presentation to the iOS-device and open access to it for their listeners. Project requires XCode 5 and iOS 7 iPhone or iPad. Project runs on the device or simulator.
 
 ### Requirements
 
