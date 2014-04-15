@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1449C318FDB78700E5F037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449B218FDB78700E5F037 /* Images.xcassets */; };
+		0B1449C418FDB78700E5F037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449B218FDB78700E5F037 /* Images.xcassets */; };
+		0B1449CB18FDB78700E5F037 /* KeenListener-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449BF18FDB78700E5F037 /* KeenListener-Info.plist */; };
+		0B1449CC18FDB78700E5F037 /* KeenListener-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449BF18FDB78700E5F037 /* KeenListener-Info.plist */; };
+		0B1449CD18FDB78700E5F037 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1449C118FDB78700E5F037 /* main.m */; };
+		0B1449CE18FDB78700E5F037 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1449C118FDB78700E5F037 /* main.m */; };
+		0B1449D118FDB8EB00E5F037 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1449D018FDB8EB00E5F037 /* AppDelegate.m */; };
+		0B1449D218FDB8EB00E5F037 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1449D018FDB8EB00E5F037 /* AppDelegate.m */; };
+		0B1449DB18FDB97400E5F037 /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DA18FDB97400E5F037 /* Pages.storyboard */; };
+		0B1449DC18FDB97400E5F037 /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DA18FDB97400E5F037 /* Pages.storyboard */; };
+		0B1449DF18FDBE7600E5F037 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DD18FDBE7600E5F037 /* Localizable.strings */; };
+		0B1449E018FDBE7600E5F037 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B1449DD18FDBE7600E5F037 /* Localizable.strings */; };
 		0BABFDF218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFDF418FDB64B000A253C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF318FDB64B000A253C /* CoreGraphics.framework */; };
 		0BABFDF618FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
-		0BABFDFC18FDB64B000A253C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BABFDFA18FDB64B000A253C /* InfoPlist.strings */; };
-		0BABFDFE18FDB64B000A253C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABFDFD18FDB64B000A253C /* main.m */; };
-		0BABFE0218FDB64B000A253C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABFE0118FDB64B000A253C /* AppDelegate.m */; };
-		0BABFE0518FDB64B000A253C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BABFE0318FDB64B000A253C /* Main.storyboard */; };
-		0BABFE0A18FDB64B000A253C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BABFE0918FDB64B000A253C /* Images.xcassets */; };
 		0BABFE1118FDB64B000A253C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFE1018FDB64B000A253C /* XCTest.framework */; };
 		0BABFE1218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFE1318FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
@@ -33,18 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1449B218FDB78700E5F037 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0B1449BF18FDB78700E5F037 /* KeenListener-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KeenListener-Info.plist"; sourceTree = "<group>"; };
+		0B1449C018FDB78700E5F037 /* KeenListener-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeenListener-Prefix.pch"; sourceTree = "<group>"; };
+		0B1449C118FDB78700E5F037 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B1449CF18FDB8EB00E5F037 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B1449D018FDB8EB00E5F037 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B1449DA18FDB97400E5F037 /* Pages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pages.storyboard; sourceTree = "<group>"; };
+		0B1449DE18FDBE7600E5F037 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0BABFDEE18FDB64B000A253C /* KeenListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeenListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFDF118FDB64B000A253C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BABFDF318FDB64B000A253C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0BABFDF518FDB64B000A253C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0BABFDF918FDB64B000A253C /* KeenListener-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeenListener-Info.plist"; sourceTree = "<group>"; };
-		0BABFDFB18FDB64B000A253C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0BABFDFD18FDB64B000A253C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0BABFDFF18FDB64B000A253C /* KeenListener-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeenListener-Prefix.pch"; sourceTree = "<group>"; };
-		0BABFE0018FDB64B000A253C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0BABFE0118FDB64B000A253C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0BABFE0418FDB64B000A253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0BABFE0918FDB64B000A253C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0BABFE0F18FDB64B000A253C /* KeenListenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeenListenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFE1018FDB64B000A253C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0BABFE1818FDB64B000A253C /* KeenListenerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeenListenerTests-Info.plist"; sourceTree = "<group>"; };
@@ -76,12 +83,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1449B018FDB78700E5F037 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B1449B118FDB78700E5F037 /* Files */,
+				0B1449B218FDB78700E5F037 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B1449B118FDB78700E5F037 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		0B1449B318FDB78700E5F037 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0B1449CF18FDB8EB00E5F037 /* AppDelegate.h */,
+				0B1449D018FDB8EB00E5F037 /* AppDelegate.m */,
+				0B1449B418FDB78700E5F037 /* Custom */,
+				0B1449B518FDB78700E5F037 /* Helpers */,
+				0B1449B618FDB78700E5F037 /* Network */,
+				0B1449B718FDB78700E5F037 /* Pages */,
+				0B1449B818FDB78700E5F037 /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0B1449B418FDB78700E5F037 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		0B1449B518FDB78700E5F037 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0B1449B618FDB78700E5F037 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0B1449B718FDB78700E5F037 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0B1449DA18FDB97400E5F037 /* Pages.storyboard */,
+				0B1449E118FDBF0800E5F037 /* Intro Screen */,
+				0B1449D318FDB95500E5F037 /* About Screen */,
+				0B1449D418FDB95500E5F037 /* Feedback Screen */,
+				0B1449D618FDB95500E5F037 /* Presentation Screen */,
+				0B1449D718FDB95500E5F037 /* Settings Screen */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0B1449B818FDB78700E5F037 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B1449DD18FDBE7600E5F037 /* Localizable.strings */,
+				0B1449BF18FDB78700E5F037 /* KeenListener-Info.plist */,
+				0B1449C018FDB78700E5F037 /* KeenListener-Prefix.pch */,
+				0B1449C118FDB78700E5F037 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B1449C218FDB78700E5F037 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		0B1449D318FDB95500E5F037 /* About Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "About Screen";
+			sourceTree = "<group>";
+		};
+		0B1449D418FDB95500E5F037 /* Feedback Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Feedback Screen";
+			sourceTree = "<group>";
+		};
+		0B1449D618FDB95500E5F037 /* Presentation Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Presentation Screen";
+			sourceTree = "<group>";
+		};
+		0B1449D718FDB95500E5F037 /* Settings Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		0B1449E118FDBF0800E5F037 /* Intro Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Intro Screen";
+			sourceTree = "<group>";
+		};
 		0BABFDE518FDB64B000A253C = {
 			isa = PBXGroup;
 			children = (
-				0BABFDF718FDB64B000A253C /* KeenListener */,
-				0BABFE1618FDB64B000A253C /* KeenListenerTests */,
+				0B1449B318FDB78700E5F037 /* Sources */,
+				0B1449B018FDB78700E5F037 /* Resources */,
+				0B1449C218FDB78700E5F037 /* Submodules */,
 				0BABFDF018FDB64B000A253C /* Frameworks */,
+				0BABFE1618FDB64B000A253C /* KeenListenerTests */,
 				0BABFDEF18FDB64B000A253C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,29 +230,6 @@
 				0BABFE1018FDB64B000A253C /* XCTest.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0BABFDF718FDB64B000A253C /* KeenListener */ = {
-			isa = PBXGroup;
-			children = (
-				0BABFE0018FDB64B000A253C /* AppDelegate.h */,
-				0BABFE0118FDB64B000A253C /* AppDelegate.m */,
-				0BABFE0318FDB64B000A253C /* Main.storyboard */,
-				0BABFE0918FDB64B000A253C /* Images.xcassets */,
-				0BABFDF818FDB64B000A253C /* Supporting Files */,
-			);
-			path = KeenListener;
-			sourceTree = "<group>";
-		};
-		0BABFDF818FDB64B000A253C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0BABFDF918FDB64B000A253C /* KeenListener-Info.plist */,
-				0BABFDFA18FDB64B000A253C /* InfoPlist.strings */,
-				0BABFDFD18FDB64B000A253C /* main.m */,
-				0BABFDFF18FDB64B000A253C /* KeenListener-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0BABFE1618FDB64B000A253C /* KeenListenerTests */ = {
@@ -223,9 +326,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BABFE0A18FDB64B000A253C /* Images.xcassets in Resources */,
-				0BABFDFC18FDB64B000A253C /* InfoPlist.strings in Resources */,
-				0BABFE0518FDB64B000A253C /* Main.storyboard in Resources */,
+				0B1449C318FDB78700E5F037 /* Images.xcassets in Resources */,
+				0B1449DF18FDBE7600E5F037 /* Localizable.strings in Resources */,
+				0B1449CB18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
+				0B1449DB18FDB97400E5F037 /* Pages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1449E018FDBE7600E5F037 /* Localizable.strings in Resources */,
+				0B1449CC18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
 				0BABFE1B18FDB64B000A253C /* InfoPlist.strings in Resources */,
+				0B1449C418FDB78700E5F037 /* Images.xcassets in Resources */,
+				0B1449DC18FDB97400E5F037 /* Pages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BABFE0218FDB64B000A253C /* AppDelegate.m in Sources */,
-				0BABFDFE18FDB64B000A253C /* main.m in Sources */,
+				0B1449D118FDB8EB00E5F037 /* AppDelegate.m in Sources */,
+				0B1449CD18FDB78700E5F037 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +361,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1449CE18FDB78700E5F037 /* main.m in Sources */,
 				0BABFE1D18FDB64B000A253C /* KeenListenerTests.m in Sources */,
+				0B1449D218FDB8EB00E5F037 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,20 +378,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0BABFDFA18FDB64B000A253C /* InfoPlist.strings */ = {
+		0B1449DD18FDBE7600E5F037 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0BABFDFB18FDB64B000A253C /* en */,
+				0B1449DE18FDBE7600E5F037 /* en */,
 			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0BABFE0318FDB64B000A253C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0BABFE0418FDB64B000A253C /* Base */,
-			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		0BABFE1918FDB64B000A253C /* InfoPlist.strings */ = {
@@ -311,6 +413,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -349,6 +452,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -370,10 +474,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KeenListener/KeenListener-Prefix.pch";
-				INFOPLIST_FILE = "KeenListener/KeenListener-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/Supporting Files/KeenListener-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/KeenListener-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -383,10 +491,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KeenListener/KeenListener-Prefix.pch";
-				INFOPLIST_FILE = "KeenListener/KeenListener-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/Supporting Files/KeenListener-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/KeenListener-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -450,6 +562,7 @@
 				0BABFE2218FDB64B000A253C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0BABFE2318FDB64B000A253C /* Build configuration list for PBXNativeTarget "KeenListenerTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +571,7 @@
 				0BABFE2518FDB64B000A253C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
