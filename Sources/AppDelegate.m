@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self configureNavigationBarAppearance];
+    
     return YES;
 }
 							
@@ -41,6 +44,33 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Application Appearance
+
+- (void)configureNavigationBarAppearance
+{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    NSString *img_name = @"NavbarImage";
+    
+    // iOS 7 navbar has 64px height (instead of 44px)
+    if (CurrentIOSVersion >= 7.f) {
+        img_name = [img_name stringByAppendingString:@"Big"];
+    }
+    
+    UIImage *navbar_image = [[UIImage imageNamed:img_name] resizableImageWithCapInsets:UIEdgeInsetsZero
+                                                                          resizingMode:UIImageResizingModeStretch];
+    [[UINavigationBar appearance] setBackgroundImage:navbar_image
+                                       forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{NSFontAttributeName:DefaultLightFont(17),
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:0.f
+                                                       forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

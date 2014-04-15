@@ -46,6 +46,7 @@
 #define Is4InchDisplay                      ([[UIScreen mainScreen] bounds].size.height == 568.0f)
 #define IsRetinaDisplay                     ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2.0)
 #define Delta4InchDisplay                   88.f
+#define CurrentIOSVersion                   [DeviceInfoHelper iOSVersion]
 
 //
 // Application Defines

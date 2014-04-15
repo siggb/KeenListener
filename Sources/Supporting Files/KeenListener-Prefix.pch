@@ -25,6 +25,9 @@
 #import "CustomBlocks.h"
 #import "CustomNotifications.h"
 #import "StoryboardSegues.h"
+#import "DeviceInfoHelper.h"
+#import "DatesHelper.h"
+#import "DialogHelper.h"
 
 
 // External Libraries
