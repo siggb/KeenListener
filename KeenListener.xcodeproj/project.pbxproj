@@ -99,6 +99,12 @@
 		0B89A18C18FDE66200E04FBB /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A18A18FDE66200E04FBB /* PresentationViewController.m */; };
 		0B89A18F18FDE66B00E04FBB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A18E18FDE66B00E04FBB /* SettingsViewController.m */; };
 		0B89A19018FDE66B00E04FBB /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A18E18FDE66B00E04FBB /* SettingsViewController.m */; };
+		0B89A19918FDECEC00E04FBB /* DatesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19218FDECEC00E04FBB /* DatesHelper.m */; };
+		0B89A19A18FDECEC00E04FBB /* DatesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19218FDECEC00E04FBB /* DatesHelper.m */; };
+		0B89A19B18FDECEC00E04FBB /* DeviceInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */; };
+		0B89A19C18FDECEC00E04FBB /* DeviceInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */; };
+		0B89A19D18FDECEC00E04FBB /* DialogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19618FDECEC00E04FBB /* DialogHelper.m */; };
+		0B89A19E18FDECEC00E04FBB /* DialogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19618FDECEC00E04FBB /* DialogHelper.m */; };
 		0BABFDF218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFDF418FDB64B000A253C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF318FDB64B000A253C /* CoreGraphics.framework */; };
 		0BABFDF618FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
@@ -214,6 +220,12 @@
 		0B89A18A18FDE66200E04FBB /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		0B89A18D18FDE66B00E04FBB /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		0B89A18E18FDE66B00E04FBB /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		0B89A19118FDECEC00E04FBB /* DatesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatesHelper.h; sourceTree = "<group>"; };
+		0B89A19218FDECEC00E04FBB /* DatesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatesHelper.m; sourceTree = "<group>"; };
+		0B89A19318FDECEC00E04FBB /* DeviceInfoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoHelper.h; sourceTree = "<group>"; };
+		0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoHelper.m; sourceTree = "<group>"; };
+		0B89A19518FDECEC00E04FBB /* DialogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogHelper.h; sourceTree = "<group>"; };
+		0B89A19618FDECEC00E04FBB /* DialogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogHelper.m; sourceTree = "<group>"; };
 		0BABFDEE18FDB64B000A253C /* KeenListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeenListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFDF118FDB64B000A253C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BABFDF318FDB64B000A253C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -294,6 +306,12 @@
 		0B1449B518FDB78700E5F037 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0B89A19118FDECEC00E04FBB /* DatesHelper.h */,
+				0B89A19218FDECEC00E04FBB /* DatesHelper.m */,
+				0B89A19318FDECEC00E04FBB /* DeviceInfoHelper.h */,
+				0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */,
+				0B89A19518FDECEC00E04FBB /* DialogHelper.h */,
+				0B89A19618FDECEC00E04FBB /* DialogHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -766,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B89A14B18FDD56E00E04FBB /* DDContextFilterLogFormatter.m in Sources */,
+				0B89A19B18FDECEC00E04FBB /* DeviceInfoHelper.m in Sources */,
 				0B89A14D18FDD56E00E04FBB /* DDDispatchQueueLogFormatter.m in Sources */,
 				0B89A17318FDDCA900E04FBB /* CustomCell.m in Sources */,
 				0B89A11D18FDD56E00E04FBB /* GCDWebDAVServer.m in Sources */,
@@ -781,6 +800,7 @@
 				0B89A12D18FDD56E00E04FBB /* GCDWebServerDataRequest.m in Sources */,
 				0B89A13718FDD56E00E04FBB /* GCDWebServerErrorResponse.m in Sources */,
 				0B89A14918FDD56E00E04FBB /* DDTTYLogger.m in Sources */,
+				0B89A19918FDECEC00E04FBB /* DatesHelper.m in Sources */,
 				0B89A13918FDD56E00E04FBB /* GCDWebServerFileResponse.m in Sources */,
 				0B89A13F18FDD56E00E04FBB /* DDAbstractDatabaseLogger.m in Sources */,
 				0B89A13D18FDD56E00E04FBB /* CLIColor.m in Sources */,
@@ -793,6 +813,7 @@
 				0B89A17F18FDE26000E04FBB /* IntroViewController.m in Sources */,
 				0B89A14718FDD56E00E04FBB /* DDLog.m in Sources */,
 				0B89A13118FDD56E00E04FBB /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				0B89A19D18FDECEC00E04FBB /* DialogHelper.m in Sources */,
 				0B89A14118FDD56E00E04FBB /* DDASLLogCapture.m in Sources */,
 				0B89A12B18FDD56E00E04FBB /* GCDWebServerResponse.m in Sources */,
 				0B89A12318FDD56E00E04FBB /* GCDWebServer.m in Sources */,
@@ -815,7 +836,9 @@
 				0B89A12A18FDD56E00E04FBB /* GCDWebServerRequest.m in Sources */,
 				0B89A17418FDDCA900E04FBB /* CustomCell.m in Sources */,
 				0B89A14618FDD56E00E04FBB /* DDFileLogger.m in Sources */,
+				0B89A19E18FDECEC00E04FBB /* DialogHelper.m in Sources */,
 				0B89A13818FDD56E00E04FBB /* GCDWebServerErrorResponse.m in Sources */,
+				0B89A19C18FDECEC00E04FBB /* DeviceInfoHelper.m in Sources */,
 				0B89A15618FDD56E00E04FBB /* Reachability.m in Sources */,
 				0B89A13E18FDD56E00E04FBB /* CLIColor.m in Sources */,
 				0B89A13218FDD56E00E04FBB /* GCDWebServerMultiPartFormRequest.m in Sources */,
@@ -835,6 +858,7 @@
 				0B89A11E18FDD56E00E04FBB /* GCDWebDAVServer.m in Sources */,
 				0B89A17218FDDCA900E04FBB /* RootViewController.m in Sources */,
 				0B1449D218FDB8EB00E5F037 /* AppDelegate.m in Sources */,
+				0B89A19A18FDECEC00E04FBB /* DatesHelper.m in Sources */,
 				0B89A14418FDD56E00E04FBB /* DDASLLogger.m in Sources */,
 				0B89A13018FDD56E00E04FBB /* GCDWebServerFileRequest.m in Sources */,
 				0B89A14C18FDD56E00E04FBB /* DDContextFilterLogFormatter.m in Sources */,
