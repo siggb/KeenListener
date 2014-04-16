@@ -17,6 +17,13 @@
 #import <Foundation/Foundation.h>
 
 
+// External Libraries
+#import "DPLog.h"
+#import "MBProgressHUD.h"
+#import "Reachability.h"
+#import "RESideMenu.h"
+
+
 // Base Headers
 #import "AppDelegate.h"
 #import "GitVersion.h"
@@ -28,12 +35,6 @@
 #import "DeviceInfoHelper.h"
 #import "DatesHelper.h"
 #import "DialogHelper.h"
-
-
-// External Libraries
-#import "DPLog.h"
-#import "MBProgressHUD.h"
-#import "Reachability.h"
 
 
 // Custom Elements

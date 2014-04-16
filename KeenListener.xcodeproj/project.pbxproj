@@ -105,6 +105,18 @@
 		0B89A19C18FDECEC00E04FBB /* DeviceInfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */; };
 		0B89A19D18FDECEC00E04FBB /* DialogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19618FDECEC00E04FBB /* DialogHelper.m */; };
 		0B89A19E18FDECEC00E04FBB /* DialogHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89A19618FDECEC00E04FBB /* DialogHelper.m */; };
+		0B92132018FE97CF00B9C733 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131B18FE97CF00B9C733 /* RECommonFunctions.m */; };
+		0B92132118FE97CF00B9C733 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131B18FE97CF00B9C733 /* RECommonFunctions.m */; };
+		0B92132218FE97CF00B9C733 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131D18FE97CF00B9C733 /* RESideMenu.m */; };
+		0B92132318FE97CF00B9C733 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131D18FE97CF00B9C733 /* RESideMenu.m */; };
+		0B92132418FE97CF00B9C733 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131F18FE97CF00B9C733 /* UIViewController+RESideMenu.m */; };
+		0B92132518FE97CF00B9C733 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92131F18FE97CF00B9C733 /* UIViewController+RESideMenu.m */; };
+		0B92132818FEA14500B9C733 /* wwdc_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132618FEA14500B9C733 /* wwdc_1.jpg */; };
+		0B92132918FEA14500B9C733 /* wwdc_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132618FEA14500B9C733 /* wwdc_1.jpg */; };
+		0B92132A18FEA14500B9C733 /* wwdc_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132718FEA14500B9C733 /* wwdc_2.jpg */; };
+		0B92132B18FEA14500B9C733 /* wwdc_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132718FEA14500B9C733 /* wwdc_2.jpg */; };
+		0B92132D18FEA43B00B9C733 /* icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132C18FEA43B00B9C733 /* icon_1024.png */; };
+		0B92132E18FEA43B00B9C733 /* icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132C18FEA43B00B9C733 /* icon_1024.png */; };
 		0BABFDF218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFDF418FDB64B000A253C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF318FDB64B000A253C /* CoreGraphics.framework */; };
 		0BABFDF618FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
@@ -226,6 +238,15 @@
 		0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoHelper.m; sourceTree = "<group>"; };
 		0B89A19518FDECEC00E04FBB /* DialogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogHelper.h; sourceTree = "<group>"; };
 		0B89A19618FDECEC00E04FBB /* DialogHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogHelper.m; sourceTree = "<group>"; };
+		0B92131A18FE97CF00B9C733 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		0B92131B18FE97CF00B9C733 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		0B92131C18FE97CF00B9C733 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		0B92131D18FE97CF00B9C733 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		0B92131E18FE97CF00B9C733 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		0B92131F18FE97CF00B9C733 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		0B92132618FEA14500B9C733 /* wwdc_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwdc_1.jpg; sourceTree = "<group>"; };
+		0B92132718FEA14500B9C733 /* wwdc_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwdc_2.jpg; sourceTree = "<group>"; };
+		0B92132C18FEA43B00B9C733 /* icon_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1024.png; sourceTree = "<group>"; };
 		0BABFDEE18FDB64B000A253C /* KeenListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeenListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFDF118FDB64B000A253C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BABFDF318FDB64B000A253C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -275,6 +296,9 @@
 		0B1449B118FDB78700E5F037 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B92132C18FEA43B00B9C733 /* icon_1024.png */,
+				0B92132618FEA14500B9C733 /* wwdc_1.jpg */,
+				0B92132718FEA14500B9C733 /* wwdc_2.jpg */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -361,6 +385,7 @@
 				0B89A0FE18FDD56E00E04FBB /* Lumberjack */,
 				0B89A11718FDD56E00E04FBB /* MBProgressHUD */,
 				0B89A11A18FDD56E00E04FBB /* Reachability */,
+				0B92131918FE97CF00B9C733 /* RESideMenu */,
 			);
 			path = Submodules;
 			sourceTree = "<group>";
@@ -605,6 +630,19 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		0B92131918FE97CF00B9C733 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0B92131A18FE97CF00B9C733 /* RECommonFunctions.h */,
+				0B92131B18FE97CF00B9C733 /* RECommonFunctions.m */,
+				0B92131C18FE97CF00B9C733 /* RESideMenu.h */,
+				0B92131D18FE97CF00B9C733 /* RESideMenu.m */,
+				0B92131E18FE97CF00B9C733 /* UIViewController+RESideMenu.h */,
+				0B92131F18FE97CF00B9C733 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
 		0BABFDE518FDB64B000A253C = {
 			isa = PBXGroup;
 			children = (
@@ -736,11 +774,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1449C318FDB78700E5F037 /* Images.xcassets in Resources */,
+				0B92132A18FEA14500B9C733 /* wwdc_2.jpg in Resources */,
 				0B1449DF18FDBE7600E5F037 /* Localizable.strings in Resources */,
+				0B92132D18FEA43B00B9C733 /* icon_1024.png in Resources */,
 				0B89A0D418FDC54B00E04FBB /* README.md in Resources */,
 				0B89A11F18FDD56E00E04FBB /* GCDWebUploader.bundle in Resources */,
 				0B1449CB18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
 				0B89A15118FDD56E00E04FBB /* README.txt in Resources */,
+				0B92132818FEA14500B9C733 /* wwdc_1.jpg in Resources */,
 				0B1449DB18FDB97400E5F037 /* Pages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,10 +794,13 @@
 				0B1449E018FDBE7600E5F037 /* Localizable.strings in Resources */,
 				0B1449CC18FDB78700E5F037 /* KeenListener-Info.plist in Resources */,
 				0BABFE1B18FDB64B000A253C /* InfoPlist.strings in Resources */,
+				0B92132E18FEA43B00B9C733 /* icon_1024.png in Resources */,
 				0B89A12018FDD56E00E04FBB /* GCDWebUploader.bundle in Resources */,
+				0B92132918FEA14500B9C733 /* wwdc_1.jpg in Resources */,
 				0B1449C418FDB78700E5F037 /* Images.xcassets in Resources */,
 				0B89A15218FDD56E00E04FBB /* README.txt in Resources */,
 				0B1449DC18FDB97400E5F037 /* Pages.storyboard in Resources */,
+				0B92132B18FEA14500B9C733 /* wwdc_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +840,7 @@
 				0B89A17118FDDCA900E04FBB /* RootViewController.m in Sources */,
 				0B89A13318FDD56E00E04FBB /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				0B89A18F18FDE66B00E04FBB /* SettingsViewController.m in Sources */,
+				0B92132018FE97CF00B9C733 /* RECommonFunctions.m in Sources */,
 				0B89A14318FDD56E00E04FBB /* DDASLLogger.m in Sources */,
 				0B89A12D18FDD56E00E04FBB /* GCDWebServerDataRequest.m in Sources */,
 				0B89A13718FDD56E00E04FBB /* GCDWebServerErrorResponse.m in Sources */,
@@ -803,6 +848,7 @@
 				0B89A19918FDECEC00E04FBB /* DatesHelper.m in Sources */,
 				0B89A13918FDD56E00E04FBB /* GCDWebServerFileResponse.m in Sources */,
 				0B89A13F18FDD56E00E04FBB /* DDAbstractDatabaseLogger.m in Sources */,
+				0B92132418FE97CF00B9C733 /* UIViewController+RESideMenu.m in Sources */,
 				0B89A13D18FDD56E00E04FBB /* CLIColor.m in Sources */,
 				0B89A14F18FDD56E00E04FBB /* DDMultiFormatter.m in Sources */,
 				0B89A18B18FDE66200E04FBB /* PresentationViewController.m in Sources */,
@@ -813,6 +859,7 @@
 				0B89A17F18FDE26000E04FBB /* IntroViewController.m in Sources */,
 				0B89A14718FDD56E00E04FBB /* DDLog.m in Sources */,
 				0B89A13118FDD56E00E04FBB /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				0B92132218FE97CF00B9C733 /* RESideMenu.m in Sources */,
 				0B89A19D18FDECEC00E04FBB /* DialogHelper.m in Sources */,
 				0B89A14118FDD56E00E04FBB /* DDASLLogCapture.m in Sources */,
 				0B89A12B18FDD56E00E04FBB /* GCDWebServerResponse.m in Sources */,
@@ -846,7 +893,9 @@
 				0BABFE1D18FDB64B000A253C /* KeenListenerTests.m in Sources */,
 				0B89A15418FDD56E00E04FBB /* MBProgressHUD.m in Sources */,
 				0B89A19018FDE66B00E04FBB /* SettingsViewController.m in Sources */,
+				0B92132118FE97CF00B9C733 /* RECommonFunctions.m in Sources */,
 				0B89A12418FDD56E00E04FBB /* GCDWebServer.m in Sources */,
+				0B92132518FE97CF00B9C733 /* UIViewController+RESideMenu.m in Sources */,
 				0B89A12E18FDD56E00E04FBB /* GCDWebServerDataRequest.m in Sources */,
 				0B89A14218FDD56E00E04FBB /* DDASLLogCapture.m in Sources */,
 				0B89A14A18FDD56E00E04FBB /* DDTTYLogger.m in Sources */,
@@ -866,6 +915,7 @@
 				0B89A14018FDD56E00E04FBB /* DDAbstractDatabaseLogger.m in Sources */,
 				0B89A12C18FDD56E00E04FBB /* GCDWebServerResponse.m in Sources */,
 				0B89A18C18FDE66200E04FBB /* PresentationViewController.m in Sources */,
+				0B92132318FE97CF00B9C733 /* RESideMenu.m in Sources */,
 				0B89A13A18FDD56E00E04FBB /* GCDWebServerFileResponse.m in Sources */,
 				0B89A15018FDD56E00E04FBB /* DDMultiFormatter.m in Sources */,
 				0B89A13618FDD56E00E04FBB /* GCDWebServerDataResponse.m in Sources */,

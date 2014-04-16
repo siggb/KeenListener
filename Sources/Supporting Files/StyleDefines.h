@@ -16,4 +16,6 @@
 #define GrayColor                       RGB(94, 94, 94)
 #define DarkGrayColor                   RGB(43, 42, 41)
 
+#define BlueColor                       RGB(25, 158, 192)
+
 #endif

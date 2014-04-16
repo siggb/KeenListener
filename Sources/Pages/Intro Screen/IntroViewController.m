@@ -9,12 +9,11 @@
 #import "IntroViewController.h"
 
 #define LOG_ON 1
-static const CGFloat TimeoutBeforeStart = 1.5f;
+static const CGFloat TimeoutBeforeStart = 2.0f;
 
 @interface IntroViewController()
 
-@property (nonatomic, weak) IBOutlet UIImageView *bgImageView;
-@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *indicatorView;
+@property (nonatomic, weak) IBOutlet UILabel *versionLabel;
 
 @end
 
@@ -28,24 +27,14 @@ static const CGFloat TimeoutBeforeStart = 1.5f;
     [super viewDidLoad];
     
     self.view.layer.masksToBounds = YES;
-    [self.indicatorView setColor:[UIColor whiteColor]];
     
-#ifdef DEBUG
-    // добавляем строку с указанием версии текущей сборки
+    // настраиваем строку с указанием версии текущей сборки
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *version = [info objectForKey:@"CFBundleShortVersionString"];
     NSString *app_version = [NSString stringWithFormat:@"%@.%@", version, GIT_SHA_VERSION];
+    [self.versionLabel setText:[NSString stringWithFormat:@"Version %@", app_version]];
     
-    UILabel *version_label = [[UILabel alloc] initWithFrame:CGRectMake(10, 20, 0, 0)];
-    [version_label setFont:DefaultLightFont(14)];
-    [version_label setText:[NSString stringWithFormat:@"Version %@", app_version]];
-    [version_label setTextColor:LightGrayColor];
-    [version_label setBackgroundColor:[UIColor clearColor]];
-    [version_label sizeToFit];
-    [self.view addSubview:version_label];
-#endif
-    
-    // запускаем логику через 1.5 секунды
+    // запускаем логику по таймауту
     [NSTimer scheduledTimerWithTimeInterval:TimeoutBeforeStart target:self
                                    selector:@selector(startLogic) userInfo:nil repeats:NO];
 }
