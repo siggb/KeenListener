@@ -9,7 +9,7 @@
 #import "IntroViewController.h"
 
 #define LOG_ON 1
-static const CGFloat TimeoutBeforeStart = 2.0f;
+static const CGFloat TimeoutBeforeStart = 1.5f;
 
 @interface IntroViewController()
 

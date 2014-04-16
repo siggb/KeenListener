@@ -117,6 +117,10 @@
 		0B92132B18FEA14500B9C733 /* wwdc_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132718FEA14500B9C733 /* wwdc_2.jpg */; };
 		0B92132D18FEA43B00B9C733 /* icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132C18FEA43B00B9C733 /* icon_1024.png */; };
 		0B92132E18FEA43B00B9C733 /* icon_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B92132C18FEA43B00B9C733 /* icon_1024.png */; };
+		0B92133218FEA77100B9C733 /* RootSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92133118FEA77100B9C733 /* RootSMViewController.m */; };
+		0B92133318FEA77100B9C733 /* RootSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92133118FEA77100B9C733 /* RootSMViewController.m */; };
+		0B92133618FEA79E00B9C733 /* LeftSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92133518FEA79E00B9C733 /* LeftSMViewController.m */; };
+		0B92133718FEA79E00B9C733 /* LeftSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B92133518FEA79E00B9C733 /* LeftSMViewController.m */; };
 		0BABFDF218FDB64B000A253C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF118FDB64B000A253C /* Foundation.framework */; };
 		0BABFDF418FDB64B000A253C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF318FDB64B000A253C /* CoreGraphics.framework */; };
 		0BABFDF618FDB64B000A253C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABFDF518FDB64B000A253C /* UIKit.framework */; };
@@ -247,6 +251,10 @@
 		0B92132618FEA14500B9C733 /* wwdc_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwdc_1.jpg; sourceTree = "<group>"; };
 		0B92132718FEA14500B9C733 /* wwdc_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwdc_2.jpg; sourceTree = "<group>"; };
 		0B92132C18FEA43B00B9C733 /* icon_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1024.png; sourceTree = "<group>"; };
+		0B92133018FEA77100B9C733 /* RootSMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSMViewController.h; sourceTree = "<group>"; };
+		0B92133118FEA77100B9C733 /* RootSMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSMViewController.m; sourceTree = "<group>"; };
+		0B92133418FEA79E00B9C733 /* LeftSMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSMViewController.h; sourceTree = "<group>"; };
+		0B92133518FEA79E00B9C733 /* LeftSMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSMViewController.m; sourceTree = "<group>"; };
 		0BABFDEE18FDB64B000A253C /* KeenListener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeenListener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BABFDF118FDB64B000A253C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0BABFDF318FDB64B000A253C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -352,6 +360,7 @@
 			children = (
 				0B1449DA18FDB97400E5F037 /* Pages.storyboard */,
 				0B1449E118FDBF0800E5F037 /* Intro Screen */,
+				0B92132F18FEA74C00B9C733 /* Side Menu */,
 				0B1449D318FDB95500E5F037 /* About Screen */,
 				0B1449D418FDB95500E5F037 /* Feedback Screen */,
 				0B1449D618FDB95500E5F037 /* Presentation Screen */,
@@ -643,6 +652,17 @@
 			path = RESideMenu;
 			sourceTree = "<group>";
 		};
+		0B92132F18FEA74C00B9C733 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0B92133418FEA79E00B9C733 /* LeftSMViewController.h */,
+				0B92133518FEA79E00B9C733 /* LeftSMViewController.m */,
+				0B92133018FEA77100B9C733 /* RootSMViewController.h */,
+				0B92133118FEA77100B9C733 /* RootSMViewController.m */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
 		0BABFDE518FDB64B000A253C = {
 			isa = PBXGroup;
 			children = (
@@ -845,6 +865,7 @@
 				0B89A12D18FDD56E00E04FBB /* GCDWebServerDataRequest.m in Sources */,
 				0B89A13718FDD56E00E04FBB /* GCDWebServerErrorResponse.m in Sources */,
 				0B89A14918FDD56E00E04FBB /* DDTTYLogger.m in Sources */,
+				0B92133218FEA77100B9C733 /* RootSMViewController.m in Sources */,
 				0B89A19918FDECEC00E04FBB /* DatesHelper.m in Sources */,
 				0B89A13918FDD56E00E04FBB /* GCDWebServerFileResponse.m in Sources */,
 				0B89A13F18FDD56E00E04FBB /* DDAbstractDatabaseLogger.m in Sources */,
@@ -871,6 +892,7 @@
 				0B89A13B18FDD56E00E04FBB /* GCDWebServerStreamingResponse.m in Sources */,
 				0B89A15318FDD56E00E04FBB /* MBProgressHUD.m in Sources */,
 				0B89A18718FDE64F00E04FBB /* FeedbackViewController.m in Sources */,
+				0B92133618FEA79E00B9C733 /* LeftSMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +900,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B92133718FEA79E00B9C733 /* LeftSMViewController.m in Sources */,
 				0B1449CE18FDB78700E5F037 /* main.m in Sources */,
 				0B89A18818FDE64F00E04FBB /* FeedbackViewController.m in Sources */,
 				0B89A12A18FDD56E00E04FBB /* GCDWebServerRequest.m in Sources */,
@@ -904,6 +927,7 @@
 				0B89A14818FDD56E00E04FBB /* DDLog.m in Sources */,
 				0B89A18418FDE64300E04FBB /* AboutViewController.m in Sources */,
 				0B89A13418FDD56E00E04FBB /* GCDWebServerURLEncodedFormRequest.m in Sources */,
+				0B92133318FEA77100B9C733 /* RootSMViewController.m in Sources */,
 				0B89A11E18FDD56E00E04FBB /* GCDWebDAVServer.m in Sources */,
 				0B89A17218FDDCA900E04FBB /* RootViewController.m in Sources */,
 				0B1449D218FDB8EB00E5F037 /* AppDelegate.m in Sources */,

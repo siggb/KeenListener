@@ -19,7 +19,14 @@
 // Screens Identifiers
 //
 
-#define MainNavigationControllerId          @"MainNavigationControllerId"
+#define RootSMViewControllerId              @"RootSMViewControllerId"
+#define LeftSMViewControllerId              @"LeftSMViewControllerId"
+#define ContentSMViewControllerId           @"ContentSMViewControllerId"
+
+#define SettingsViewControllerId            @"SettingsViewControllerId"
+#define PresentationViewControllerId        @"PresentationViewControllerId"
+#define FeedbackViewControllerId            @"FeedbackViewControllerId"
+#define AboutViewControllerId               @"AboutViewControllerId"
 
 #endif
 

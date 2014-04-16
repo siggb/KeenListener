@@ -12,10 +12,7 @@
 #define DefaultLightFontName            @"Helvetica-Light"
 #define DefaultLightFont(fsize)         [UIFont fontWithName:(DefaultLightFontName) size:(fsize)]
 
-#define LightGrayColor                  RGB(237, 237, 237)
-#define GrayColor                       RGB(94, 94, 94)
-#define DarkGrayColor                   RGB(43, 42, 41)
-
-#define BlueColor                       RGB(25, 158, 192)
+#define GrayColor                       RGB(48, 48, 48)
+#define BlueColor                       RGB(0, 158, 194)
 
 #endif

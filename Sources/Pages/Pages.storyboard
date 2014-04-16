@@ -31,71 +31,163 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWDC" id="pDp-YX-Egv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWDC2" id="pDp-YX-Egv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="fal-FU-6bY">
-                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" id="fal-FU-6bY">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <color key="color" red="0.73604910710000004" green="0.73604910710000004" blue="0.73604910710000004" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nn-UR-qog">
-                                <rect key="frame" x="-6" y="152" width="320" height="40"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keen Listener" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvj-Lj-6yp">
+                                <rect key="frame" x="0.0" y="133" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="13"/>
-                                <color key="textColor" red="0.73604910714285721" green="0.73604910714285721" blue="0.73604910714285721" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvj-Lj-6yp">
-                                <rect key="frame" x="0.0" y="96" width="320" height="60"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nn-UR-qog">
+                                <rect key="frame" x="0.0" y="170" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Keen Listener">
-                                        <attributes>
-                                            <color key="NSColor" red="0.098039215686274508" green="0.61960784313725492" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="48" name="Optima-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="k13-mm-iYE"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="versionLabel" destination="7nn-UR-qog" id="Ryi-qB-fIZ"/>
                         <outlet property="view" destination="Ero-j4-tsG" id="i9M-Z0-eb1"/>
-                        <segue destination="1Zm-zN-Ar5" kind="push" identifier="IntroToMainScreenSegue" id="N66-Xg-w7I"/>
+                        <segue destination="dyH-WJ-RHD" kind="push" identifier="IntroToMainScreenSegue" id="yXp-OC-QRo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lC5-ZP-hdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2203" y="-1422"/>
         </scene>
-        <!--About View Controller-->
-        <scene sceneID="Ihn-KX-FY6">
+        <!--RootSM View Controller-->
+        <scene sceneID="Zib-sh-Pfv">
             <objects>
-                <viewController id="1Zm-zN-Ar5" customClass="AboutViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gav-re-1iM">
+                <viewController storyboardIdentifier="RootSMViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dyH-WJ-RHD" customClass="RootSMViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQX-dd-PSE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Aw-cz-Xc9"/>
-                    <connections>
-                        <outlet property="view" destination="Gav-re-1iM" id="HHm-U1-7Dm"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="TFD-4f-IWk"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ug6-rn-CkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i09-be-Lqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1748" y="-1420"/>
+            <point key="canvasLocation" x="-1765" y="-1422"/>
+        </scene>
+        <!--LeftSM View Controller-->
+        <scene sceneID="ap8-2U-MSG">
+            <objects>
+                <viewController storyboardIdentifier="LeftSMViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RHr-DY-WzU" customClass="LeftSMViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yy6-gg-lhR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN0-B8-hkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1317" y="-1422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BXS-Wz-9lH">
+            <objects>
+                <navigationController storyboardIdentifier="ContentSMViewControllerId" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gyD-XU-BjB" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3g4-5z-OXq">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="g87-vk-how" kind="push" id="dlG-Ci-QCw"/>
+                        <segue destination="zRB-av-lTS" kind="push" id="LYA-Xp-DIB"/>
+                        <segue destination="aZ4-Fb-fic" kind="push" id="jVT-ka-Um0"/>
+                        <segue destination="eQW-t2-f1b" kind="relationship" relationship="rootViewController" id="WHC-uy-aKD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0a-ps-d2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1317" y="-706"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="DQZ-le-cn0">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eQW-t2-f1b" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bW7-Th-mnK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7G-fo-Baw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udh-fR-xvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-776" y="-1420"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="hoQ-Xd-0t8">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aZ4-Fb-fic" customClass="AboutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NWr-U8-F2x">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h9h-GV-gJT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKx-w8-0TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-776" y="717"/>
+        </scene>
+        <!--Presentation View Controller-->
+        <scene sceneID="tEb-oo-Y8G">
+            <objects>
+                <viewController storyboardIdentifier="PresentationViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g87-vk-how" customClass="PresentationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHe-hg-gZ2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SUe-l6-Ahc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVF-nK-J4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-776" y="-706"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="pGY-Jf-gKg">
+            <objects>
+                <viewController storyboardIdentifier="FeedbackViewControllerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zRB-av-lTS" customClass="FeedbackViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avy-8q-Y4U">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Ou-nq-ddH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXm-nB-qar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-776" y="5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="WWDC" width="320" height="568"/>
+        <image name="WWDC2" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
