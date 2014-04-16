@@ -35,6 +35,7 @@
 #import "DeviceInfoHelper.h"
 #import "DatesHelper.h"
 #import "DialogHelper.h"
+#import "SettingsManager.h"
 
 
 // Custom Elements

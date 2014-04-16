@@ -26,6 +26,7 @@
 - (void)showScreenLoadingWithText:(NSString*)text;
 - (void)changeLoadingText:(NSString*)text;
 - (void)hideLoading;
+- (void)hideLoadingWithDelay:(NSTimeInterval)delay;
 
 /// -----------------------------------------------------------------------
 /// @name Animating a change in the orientation

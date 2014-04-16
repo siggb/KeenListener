@@ -137,6 +137,8 @@
 		0BCA345118FF1F12007AB7F1 /* IMG_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA344E18FF1F12007AB7F1 /* IMG_01.png */; };
 		0BCA345218FF1F12007AB7F1 /* IMG_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA344F18FF1F12007AB7F1 /* IMG_02.png */; };
 		0BCA345318FF1F12007AB7F1 /* IMG_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA344F18FF1F12007AB7F1 /* IMG_02.png */; };
+		0BCA345618FF22CB007AB7F1 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA345518FF22CB007AB7F1 /* SettingsManager.m */; };
+		0BCA345718FF22CB007AB7F1 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA345518FF22CB007AB7F1 /* SettingsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +278,8 @@
 		0BCA344818FF18C6007AB7F1 /* stop_img_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_img_512.png; sourceTree = "<group>"; };
 		0BCA344E18FF1F12007AB7F1 /* IMG_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_01.png; sourceTree = "<group>"; };
 		0BCA344F18FF1F12007AB7F1 /* IMG_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_02.png; sourceTree = "<group>"; };
+		0BCA345418FF22CB007AB7F1 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		0BCA345518FF22CB007AB7F1 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +363,8 @@
 				0B89A19418FDECEC00E04FBB /* DeviceInfoHelper.m */,
 				0B89A19518FDECEC00E04FBB /* DialogHelper.h */,
 				0B89A19618FDECEC00E04FBB /* DialogHelper.m */,
+				0BCA345418FF22CB007AB7F1 /* SettingsManager.h */,
+				0BCA345518FF22CB007AB7F1 /* SettingsManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -904,6 +910,7 @@
 				0B92132418FE97CF00B9C733 /* UIViewController+RESideMenu.m in Sources */,
 				0B89A13D18FDD56E00E04FBB /* CLIColor.m in Sources */,
 				0B89A14F18FDD56E00E04FBB /* DDMultiFormatter.m in Sources */,
+				0BCA345618FF22CB007AB7F1 /* SettingsManager.m in Sources */,
 				0B89A18B18FDE66200E04FBB /* PresentationViewController.m in Sources */,
 				0B89A17B18FDDF8F00E04FBB /* CustomNavigationController.m in Sources */,
 				0B89A12518FDD56E00E04FBB /* GCDWebServerConnection.m in Sources */,
@@ -972,6 +979,7 @@
 				0B89A12C18FDD56E00E04FBB /* GCDWebServerResponse.m in Sources */,
 				0B89A18C18FDE66200E04FBB /* PresentationViewController.m in Sources */,
 				0B92132318FE97CF00B9C733 /* RESideMenu.m in Sources */,
+				0BCA345718FF22CB007AB7F1 /* SettingsManager.m in Sources */,
 				0B89A13A18FDD56E00E04FBB /* GCDWebServerFileResponse.m in Sources */,
 				0B89A15018FDD56E00E04FBB /* DDMultiFormatter.m in Sources */,
 				0B89A13618FDD56E00E04FBB /* GCDWebServerDataResponse.m in Sources */,

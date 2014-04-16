@@ -10,6 +10,8 @@
 
 @interface PresentationViewController ()
 
+@property (nonatomic, weak) IBOutlet UIWebView *webView;
+
 @end
 
 @implementation PresentationViewController
@@ -17,6 +19,15 @@
 - (void)initialize
 {
     self.title = @"Presentation";
+}
+
+#pragma mark - View Lifecycle
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[SettingsManagerInstance serverURL]]];
 }
 
 @end

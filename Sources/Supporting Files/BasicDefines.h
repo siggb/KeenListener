@@ -55,4 +55,6 @@
 #define APP_TITLE                           @"Keen Listener"
 #define APP_STORYBOARD_NAME                 @"Pages"
 
+#define SettingsManagerInstance             [SettingsManager instance]
+
 #endif

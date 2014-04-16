@@ -9,6 +9,8 @@
 #import "RootSMViewController.h"
 #import "LeftSMViewController.h"
 
+#define LOG_ON 0
+
 @implementation RootSMViewController
 
 #pragma mark - View Lifecycle
@@ -33,22 +35,22 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
-    DPLogFast(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+    DPLog(LOG_ON, @"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
 {
-    DPLogFast(@"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+    DPLog(LOG_ON, @"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
 {
-    DPLogFast(@"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
+    DPLog(LOG_ON, @"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
 {
-    DPLogFast(@"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
+    DPLog(LOG_ON, @"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 @end

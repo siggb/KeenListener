@@ -236,6 +236,9 @@
                                         <state key="normal" image="StopBtn">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopButtonClicked:" destination="eQW-t2-f1b" eventType="touchUpInside" id="3jl-6x-xg9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nP5-2x-qnq">
                                         <rect key="frame" x="86" y="60" width="60" height="60"/>
@@ -244,6 +247,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButtonClicked:" destination="eQW-t2-f1b" eventType="touchUpInside" id="FhR-qW-bGO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -252,6 +258,10 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="j7G-fo-Baw"/>
+                    <connections>
+                        <outlet property="startButton" destination="nP5-2x-qnq" id="Wyk-YQ-p0p"/>
+                        <outlet property="stopButton" destination="82h-Vj-st6" id="Tuq-h2-hMT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udh-fR-xvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,8 +291,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="g87-vk-how" id="EJK-dr-SnB"/>
+                        </connections>
                     </webView>
                     <navigationItem key="navigationItem" id="SUe-l6-Ahc"/>
+                    <connections>
+                        <outlet property="webView" destination="iPg-uo-XTc" id="HQX-iN-ceq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVF-nK-J4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

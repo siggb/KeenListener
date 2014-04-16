@@ -189,6 +189,15 @@
     indicator = nil;
 }
 
+- (void)hideLoadingWithDelay:(NSTimeInterval)delay
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
+    if (indicator)
+        [indicator hide:YES afterDelay:delay];
+    indicator = nil;
+}
+
 #pragma mark - Animating a change in the orientation
 
 - (BOOL)isPortraitOrientation
