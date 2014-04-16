@@ -53,6 +53,8 @@
 {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:GrayColor];
+    
     // настройка навбара
     [self configureNavbar];
 }
@@ -94,7 +96,7 @@
 - (void)initBackButton
 {
     UIButton *back_btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    back_btn.frame = CGRectMake(0, 0, 30, 30);
+    back_btn.frame = CGRectMake(0, 0, 24, 24);
     [back_btn setContentMode:UIViewContentModeCenter];
     [back_btn setImage:[UIImage imageNamed:@"BackButton"] forState:UIControlStateNormal];
     [back_btn setImage:[UIImage imageNamed:@"BackButtonSel"] forState:UIControlStateHighlighted];
@@ -118,7 +120,7 @@
 - (void)initSidebarButton
 {
     UIButton *sidebar_btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    sidebar_btn.frame = CGRectMake(0, 0, 30, 30);
+    sidebar_btn.frame = CGRectMake(0, 0, 18, 14);
     [sidebar_btn setContentMode:UIViewContentModeCenter];
     [sidebar_btn setImage:[UIImage imageNamed:@"SidebarBtn"] forState:UIControlStateNormal];
     [sidebar_btn setImage:[UIImage imageNamed:@"SidebarBtnSel"] forState:UIControlStateHighlighted];

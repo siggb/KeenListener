@@ -68,7 +68,7 @@
      @{NSFontAttributeName:DefaultRegularFont(21),
        NSForegroundColorAttributeName:BlueColor}];
     
-    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"NavbarShadowLine"]];
     [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:0.f
                                                        forBarMetrics:UIBarMetricsDefault];
 }
