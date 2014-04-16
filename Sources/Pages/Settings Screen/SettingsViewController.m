@@ -19,9 +19,4 @@
     self.title = @"Settings";
 }
 
-- (void)sidebarButtonClicked
-{
-    [self presentLeftMenuViewController:self];
-}
-
 @end

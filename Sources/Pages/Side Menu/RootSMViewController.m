@@ -11,6 +11,8 @@
 
 @implementation RootSMViewController
 
+#pragma mark - View Lifecycle
+
 - (void)awakeFromNib
 {
     self.menuPreferredStatusBarStyle = UIStatusBarStyleLightContent;

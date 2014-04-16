@@ -29,7 +29,8 @@
 
 @class GCDWebUploader;
 
-@protocol GCDWebUploaderDelegate <NSObject>
+// These methods are always called on main thread
+@protocol GCDWebUploaderDelegate <GCDWebServerDelegate>
 @optional
 - (void)webUploader:(GCDWebUploader*)uploader didDownloadFileAtPath:(NSString*)path;
 - (void)webUploader:(GCDWebUploader*)uploader didUploadFileAtPath:(NSString*)path;
@@ -51,6 +52,7 @@
 - (instancetype)initWithUploadDirectory:(NSString*)path;
 @end
 
+// These methods can be called from any thread
 @interface GCDWebUploader (Subclassing)
 - (BOOL)shouldUploadFileAtPath:(NSString*)path withTemporaryFile:(NSString*)tempPath;  // Default implementation returns YES
 - (BOOL)shouldMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;  // Default implementation returns YES

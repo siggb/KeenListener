@@ -135,8 +135,7 @@
  */
 - (void)sidebarButtonClicked
 {
-    // redefine me
-    // ..
+    [self presentLeftMenuViewController:self];
 }
 
 #pragma mark - Индикация загрузки данных

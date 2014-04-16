@@ -40,12 +40,20 @@
 #else
 #define kDefaultPort 8080
 #endif
-#define kMaxPendingConnections 16
 
 @interface GCDWebServer () {
 @private
+  id<GCDWebServerDelegate> __unsafe_unretained _delegate;
+  dispatch_queue_t _syncQueue;
   NSMutableArray* _handlers;
+  NSInteger _activeConnections;  // Accessed only with _syncQueue
+  BOOL _connected;
+  CFRunLoopTimerRef _connectedTimer;
   
+  NSString* _serverName;
+  Class _connectionClass;
+  BOOL _mapHEADToGET;
+  CFTimeInterval _disconnectDelay;
   NSUInteger _port;
   dispatch_source_t _source;
   CFNetServiceRef _service;
@@ -61,6 +69,14 @@
   GCDWebServerProcessBlock _processBlock;
 }
 @end
+
+NSString* const GCDWebServerOption_Port = @"Port";
+NSString* const GCDWebServerOption_BonjourName = @"BonjourName";
+NSString* const GCDWebServerOption_MaxPendingConnections = @"MaxPendingConnections";
+NSString* const GCDWebServerOption_ServerName = @"ServerName";
+NSString* const GCDWebServerOption_ConnectionClass = @"ConnectionClass";
+NSString* const GCDWebServerOption_AutomaticallyMapHEADToGET = @"AutomaticallyMapHEADToGET";
+NSString* const GCDWebServerOption_ConnectedStateCoalescingInterval = @"ConnectedStateCoalescingInterval";
 
 #ifndef __GCDWEBSERVER_LOGGING_HEADER__
 #ifdef NDEBUG
@@ -120,7 +136,7 @@ static void _SignalHandler(int signal) {
 
 @implementation GCDWebServer
 
-@synthesize handlers=_handlers, port=_port;
+@synthesize delegate=_delegate, handlers=_handlers, port=_port, serverName=_serverName, shouldAutomaticallyMapHEADToGET=_mapHEADToGET;
 
 #ifndef __GCDWEBSERVER_LOGGING_HEADER__
 
@@ -137,21 +153,93 @@ static void _SignalHandler(int signal) {
   GCDWebServerInitializeFunctions();
 }
 
+static void _ConnectedTimerCallBack(CFRunLoopTimerRef timer, void* info) {
+  @autoreleasepool {
+    [(ARC_BRIDGE GCDWebServer*)info _didDisconnect];
+  }
+}
+
 - (instancetype)init {
   if ((self = [super init])) {
+    _syncQueue = dispatch_queue_create([NSStringFromClass([self class]) UTF8String], DISPATCH_QUEUE_SERIAL);
     _handlers = [[NSMutableArray alloc] init];
+    CFRunLoopTimerContext context = {0, (ARC_BRIDGE void*)self, NULL, NULL, NULL};
+    _connectedTimer = CFRunLoopTimerCreate(kCFAllocatorDefault, HUGE_VAL, HUGE_VAL, 0, 0, _ConnectedTimerCallBack, &context);
+    CFRunLoopAddTimer(CFRunLoopGetMain(), _connectedTimer, kCFRunLoopCommonModes);
   }
   return self;
 }
 
 - (void)dealloc {
+  DCHECK(_connected == NO);
+  DCHECK(_activeConnections == 0);
+  
+  _delegate = nil;
   if (_source) {
     [self stop];
   }
   
+  CFRunLoopTimerInvalidate(_connectedTimer);
+  CFRelease(_connectedTimer);
   ARC_RELEASE(_handlers);
+  ARC_DISPATCH_RELEASE(_syncQueue);
   
   ARC_DEALLOC(super);
+}
+
+- (void)_didConnect {
+  DCHECK(_connected == NO);
+  _connected = YES;
+  LOG_DEBUG(@"Did connect");
+  if ([_delegate respondsToSelector:@selector(webServerDidConnect:)]) {
+    [_delegate webServerDidConnect:self];
+  }
+}
+
+// Called from any thread
+- (void)willStartConnection:(GCDWebServerConnection*)connection {
+  dispatch_sync(_syncQueue, ^{
+    
+    DCHECK(_activeConnections >= 0);
+    if (_activeConnections == 0) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        if (_disconnectDelay > 0.0) {
+          CFRunLoopTimerSetNextFireDate(_connectedTimer, HUGE_VAL);
+        }
+        if (_connected == NO) {
+          [self _didConnect];
+        }
+      });
+    }
+    _activeConnections += 1;
+    
+  });
+}
+
+- (void)_didDisconnect {
+  DCHECK(_connected == YES);
+  _connected = NO;
+  LOG_DEBUG(@"Did disconnect");
+  if ([_delegate respondsToSelector:@selector(webServerDidDisconnect:)]) {
+    [_delegate webServerDidDisconnect:self];
+  }
+}
+
+// Called from any thread
+- (void)didEndConnection:(GCDWebServerConnection*)connection {
+  dispatch_sync(_syncQueue, ^{
+    DCHECK(_activeConnections > 0);
+    _activeConnections -= 1;
+    if (_activeConnections == 0) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        if (_disconnectDelay > 0.0) {
+          CFRunLoopTimerSetNextFireDate(_connectedTimer, CFAbsoluteTimeGetCurrent() + _disconnectDelay);
+        } else {
+          [self _didDisconnect];
+        }
+      });
+    }
+  });
 }
 
 - (NSString*)bonjourName {
@@ -187,7 +275,22 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
 }
 
 - (BOOL)startWithPort:(NSUInteger)port bonjourName:(NSString*)name {
+  NSMutableDictionary* options = [NSMutableDictionary dictionary];
+  [options setObject:[NSNumber numberWithInteger:port] forKey:GCDWebServerOption_Port];
+  [options setValue:name forKey:GCDWebServerOption_BonjourName];
+  return [self startWithOptions:options];
+}
+
+static inline id _GetOption(NSDictionary* options, NSString* key, id defaultValue) {
+  id value = [options objectForKey:key];
+  return value ? value : defaultValue;
+}
+
+- (BOOL)startWithOptions:(NSDictionary*)options {
   DCHECK(_source == NULL);
+  NSUInteger port = [_GetOption(options, GCDWebServerOption_Port, [NSNumber numberWithUnsignedInteger:0]) unsignedIntegerValue];
+  NSString* name = _GetOption(options, GCDWebServerOption_BonjourName, @"");
+  NSUInteger maxPendingConnections = [_GetOption(options, GCDWebServerOption_MaxPendingConnections, [NSNumber numberWithUnsignedInteger:16]) unsignedIntegerValue];
   int listeningSocket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
   if (listeningSocket > 0) {
     int yes = 1;
@@ -200,16 +303,21 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
     addr4.sin_port = htons(port);
     addr4.sin_addr.s_addr = htonl(INADDR_ANY);
     if (bind(listeningSocket, (void*)&addr4, sizeof(addr4)) == 0) {
-      if (listen(listeningSocket, kMaxPendingConnections) == 0) {
+      if (listen(listeningSocket, (int)maxPendingConnections) == 0) {
+        LOG_DEBUG(@"Did open listening socket %i", listeningSocket);
+        _serverName = [_GetOption(options, GCDWebServerOption_ServerName, NSStringFromClass([self class])) copy];
+        _connectionClass = _GetOption(options, GCDWebServerOption_ConnectionClass, [GCDWebServerConnection class]);
+        _mapHEADToGET = [_GetOption(options, GCDWebServerOption_AutomaticallyMapHEADToGET, [NSNumber numberWithBool:YES]) boolValue];
+        _disconnectDelay = [_GetOption(options, GCDWebServerOption_ConnectedStateCoalescingInterval, [NSNumber numberWithDouble:1.0]) doubleValue];
         _source = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, listeningSocket, 0, kGCDWebServerGCDQueue);
         dispatch_source_set_cancel_handler(_source, ^{
           
           @autoreleasepool {
             int result = close(listeningSocket);
             if (result != 0) {
-              LOG_ERROR(@"Failed closing socket (%i): %s", errno, strerror(errno));
+              LOG_ERROR(@"Failed closing listening socket: %s (%i)", strerror(errno), errno);
             } else {
-              LOG_DEBUG(@"Closed listening socket");
+              LOG_DEBUG(@"Did close listening socket %i", listeningSocket);
             }
           }
           
@@ -235,28 +343,27 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
               int noSigPipe = 1;
               setsockopt(socket, SOL_SOCKET, SO_NOSIGPIPE, &noSigPipe, sizeof(noSigPipe));  // Make sure this socket cannot generate SIG_PIPE
               
-              Class connectionClass = [[self class] connectionClass];
-              GCDWebServerConnection* connection = [[connectionClass alloc] initWithServer:self localAddress:localAddress remoteAddress:remoteAddress socket:socket];  // Connection will automatically retain itself while opened
+              GCDWebServerConnection* connection = [[_connectionClass alloc] initWithServer:self localAddress:localAddress remoteAddress:remoteAddress socket:socket];  // Connection will automatically retain itself while opened
 #if __has_feature(objc_arc)
               [connection self];  // Prevent compiler from complaining about unused variable / useless statement
 #else
               [connection release];
 #endif
             } else {
-              LOG_ERROR(@"Failed accepting socket (%i): %s", errno, strerror(errno));
+              LOG_ERROR(@"Failed accepting socket: %s (%i)", strerror(errno), errno);
             }
           }
           
         });
         
-        if (port == 0) {  // Determine the actual port we are listening on
+        if (port == 0) {
           struct sockaddr addr;
           socklen_t addrlen = sizeof(addr);
           if (getsockname(listeningSocket, &addr, &addrlen) == 0) {
             struct sockaddr_in* sockaddr = (struct sockaddr_in*)&addr;
             _port = ntohs(sockaddr->sin_port);
           } else {
-            LOG_ERROR(@"Failed retrieving socket address (%i): %s", errno, strerror(errno));
+            LOG_ERROR(@"Failed retrieving socket address: %s (%i)", strerror(errno), errno);
           }
         } else {
           _port = port;
@@ -277,16 +384,21 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
         
         dispatch_resume(_source);
         LOG_INFO(@"%@ started on port %i and reachable at %@", [self class], (int)_port, self.serverURL);
+        if ([_delegate respondsToSelector:@selector(webServerDidStart:)]) {
+          dispatch_async(dispatch_get_main_queue(), ^{
+            [_delegate webServerDidStart:self];
+          });
+        }
       } else {
-        LOG_ERROR(@"Failed listening on socket (%i): %s", errno, strerror(errno));
+        LOG_ERROR(@"Failed listening on socket: %s (%i)", strerror(errno), errno);
         close(listeningSocket);
       }
     } else {
-      LOG_ERROR(@"Failed binding socket (%i): %s", errno, strerror(errno));
+      LOG_ERROR(@"Failed binding socket: %s (%i)", strerror(errno), errno);
       close(listeningSocket);
     }
   } else {
-    LOG_ERROR(@"Failed creating socket (%i): %s", errno, strerror(errno));
+    LOG_ERROR(@"Failed creating socket: %s (%i)", strerror(errno), errno);
   }
   return (_source ? YES : NO);
 }
@@ -308,26 +420,18 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
     dispatch_source_cancel(_source);  // This will close the socket
     ARC_DISPATCH_RELEASE(_source);
     _source = NULL;
+    _port = 0;
+    
+    ARC_RELEASE(_serverName);
+    _serverName = nil;
     
     LOG_INFO(@"%@ stopped", [self class]);
+    if ([_delegate respondsToSelector:@selector(webServerDidStop:)]) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [_delegate webServerDidStop:self];
+      });
+    }
   }
-  _port = 0;
-}
-
-@end
-
-@implementation GCDWebServer (Subclassing)
-
-+ (Class)connectionClass {
-  return [GCDWebServerConnection class];
-}
-
-+ (NSString*)serverName {
-  return NSStringFromClass(self);
-}
-
-+ (BOOL)shouldAutomaticallyMapHEADToGET {
-  return YES;
 }
 
 @end
@@ -365,6 +469,7 @@ static void _NetServiceClientCallBack(CFNetServiceRef service, CFStreamError* er
 #if !TARGET_OS_IPHONE
 
 - (BOOL)runWithPort:(NSUInteger)port {
+  DCHECK([NSThread isMainThread]);
   BOOL success = NO;
   _run = YES;
   void (*handler)(int) = signal(SIGINT, _SignalHandler);

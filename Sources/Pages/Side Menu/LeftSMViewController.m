@@ -29,6 +29,8 @@ typedef NS_ENUM(NSUInteger, kAppScreen) {
 
 @implementation LeftSMViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

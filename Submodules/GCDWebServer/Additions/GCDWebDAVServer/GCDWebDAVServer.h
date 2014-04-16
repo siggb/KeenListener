@@ -29,14 +29,15 @@
 
 @class GCDWebDAVServer;
 
-@protocol GCDWebDAVServerDelegate <NSObject>
+// These methods are always called on main thread
+@protocol GCDWebDAVServerDelegate <GCDWebServerDelegate>
 @optional
-- (void)davServer:(GCDWebDAVServer*)uploader didDownloadFileAtPath:(NSString*)path;
-- (void)davServer:(GCDWebDAVServer*)uploader didUploadFileAtPath:(NSString*)path;
-- (void)davServer:(GCDWebDAVServer*)uploader didMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;
-- (void)davServer:(GCDWebDAVServer*)uploader didCopyItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;
-- (void)davServer:(GCDWebDAVServer*)uploader didDeleteItemAtPath:(NSString*)path;
-- (void)davServer:(GCDWebDAVServer*)uploader didCreateDirectoryAtPath:(NSString*)path;
+- (void)davServer:(GCDWebDAVServer*)server didDownloadFileAtPath:(NSString*)path;
+- (void)davServer:(GCDWebDAVServer*)server didUploadFileAtPath:(NSString*)path;
+- (void)davServer:(GCDWebDAVServer*)server didMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;
+- (void)davServer:(GCDWebDAVServer*)server didCopyItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;
+- (void)davServer:(GCDWebDAVServer*)server didDeleteItemAtPath:(NSString*)path;
+- (void)davServer:(GCDWebDAVServer*)server didCreateDirectoryAtPath:(NSString*)path;
 @end
 
 @interface GCDWebDAVServer : GCDWebServer
@@ -47,6 +48,7 @@
 - (instancetype)initWithUploadDirectory:(NSString*)path;
 @end
 
+// These methods can be called from any thread
 @interface GCDWebDAVServer (Subclassing)
 - (BOOL)shouldUploadFileAtPath:(NSString*)path withTemporaryFile:(NSString*)tempPath;  // Default implementation returns YES
 - (BOOL)shouldMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath;  // Default implementation returns YES

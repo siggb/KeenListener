@@ -61,12 +61,10 @@
     
     UIImage *navbar_image = [[UIImage imageNamed:img_name] resizableImageWithCapInsets:UIEdgeInsetsZero
                                                                           resizingMode:UIImageResizingModeStretch];
-    [[UINavigationBar appearance] setBackgroundImage:navbar_image
-                                       forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:navbar_image forBarMetrics:UIBarMetricsDefault];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:
-     @{NSFontAttributeName:DefaultRegularFont(21),
-       NSForegroundColorAttributeName:BlueColor}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:DefaultRegularFont(21),
+                                                           NSForegroundColorAttributeName:BlueColor}];
     
     [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"NavbarShadowLine"]];
     [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:0.f

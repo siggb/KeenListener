@@ -42,7 +42,27 @@ typedef NS_ENUM(int, GCDWebServerLogLevel) {
 typedef GCDWebServerRequest* (^GCDWebServerMatchBlock)(NSString* requestMethod, NSURL* requestURL, NSDictionary* requestHeaders, NSString* urlPath, NSDictionary* urlQuery);
 typedef GCDWebServerResponse* (^GCDWebServerProcessBlock)(GCDWebServerRequest* request);
 
+extern NSString* const GCDWebServerOption_Port;  // NSNumber / NSUInteger (default is 0 i.e. use a random port)
+extern NSString* const GCDWebServerOption_BonjourName;  // NSString (default is empty string i.e. use computer name)
+extern NSString* const GCDWebServerOption_MaxPendingConnections;  // NSNumber / NSUInteger (default is 16)
+extern NSString* const GCDWebServerOption_ServerName;  // NSString (default is server class name)
+extern NSString* const GCDWebServerOption_ConnectionClass;  // Subclass of GCDWebServerConnection (default is GCDWebServerConnection class)
+extern NSString* const GCDWebServerOption_AutomaticallyMapHEADToGET;  // NSNumber / BOOL (default is YES)
+extern NSString* const GCDWebServerOption_ConnectedStateCoalescingInterval;  // NSNumber / double (default is 1.0 - set to 0.0 to disable coaslescing of -webServerDidConnect: / -webServerDidDisconnect:)
+
+@class GCDWebServer;
+
+// These methods are always called on main thread
+@protocol GCDWebServerDelegate <NSObject>
+@optional
+- (void)webServerDidStart:(GCDWebServer*)server;
+- (void)webServerDidConnect:(GCDWebServer*)server;  // Called when first connection is opened
+- (void)webServerDidDisconnect:(GCDWebServer*)server;  // Called when last connection is closed
+- (void)webServerDidStop:(GCDWebServer*)server;
+@end
+
 @interface GCDWebServer : NSObject
+@property(nonatomic, assign) id<GCDWebServerDelegate> delegate;
 @property(nonatomic, readonly, getter=isRunning) BOOL running;
 @property(nonatomic, readonly) NSUInteger port;
 @property(nonatomic, readonly) NSString* bonjourName;  // Only non-nil if Bonjour registration is active
@@ -52,13 +72,8 @@ typedef GCDWebServerResponse* (^GCDWebServerProcessBlock)(GCDWebServerRequest* r
 
 - (BOOL)start;  // Default is port 8080 (OS X & iOS Simulator) or 80 (iOS) and computer / device name for Bonjour
 - (BOOL)startWithPort:(NSUInteger)port bonjourName:(NSString*)name;  // Pass nil name to disable Bonjour or empty string to use computer name
+- (BOOL)startWithOptions:(NSDictionary*)options;
 - (void)stop;
-@end
-
-@interface GCDWebServer (Subclassing)
-+ (Class)connectionClass;
-+ (NSString*)serverName;  // Default is class name
-+ (BOOL)shouldAutomaticallyMapHEADToGET;  // Default is YES which means HEAD requests are mapped to GET requests with the response body being discarded
 @end
 
 @interface GCDWebServer (Extensions)

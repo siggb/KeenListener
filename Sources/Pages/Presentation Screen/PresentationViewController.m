@@ -19,9 +19,4 @@
     self.title = @"Presentation";
 }
 
-- (void)sidebarButtonClicked
-{
-    [self presentLeftMenuViewController:self];
-}
-
 @end
