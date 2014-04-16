@@ -1,6 +1,7 @@
 ## Keen Listener for iOS
 
-<img src="https://raw.githubusercontent.com/siggb/KeenListener/master/Resources/Files/Screenshots/IMG_01.png" alt="Settings Page" width="320" height="568" />   <img src="https://raw.githubusercontent.com/siggb/KeenListener/master/Resources/Files/Screenshots/IMG_02.png" alt="Landing Page" width="320" height="568" />
+<img src="https://raw.githubusercontent.com/siggb/KeenListener/master/Resources/Files/Screenshots/IMG_01.png" alt="Settings Page" width="320" height="568" />
+<img src="https://raw.githubusercontent.com/siggb/KeenListener/master/Resources/Files/Screenshots/IMG_02.png" alt="Landing Page" width="320" height="568" />
 
 This project was created as a supplement to the final qualifying student work, titled "Interaction system for the speaker and listener on a mobile platform" ([Vladimir State University](http://vlsu.ru), specialty ID is 230101).
 
