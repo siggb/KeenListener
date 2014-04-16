@@ -7,6 +7,6 @@
 #ifndef GitVersion_h
 #define GitVersion_h
 
-#define GIT_SHA_VERSION @"744d8dc"
+#define GIT_SHA_VERSION @"b9be363"
 
 #endif
