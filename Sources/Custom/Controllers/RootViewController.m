@@ -83,6 +83,9 @@
     if ([self.navigationController.viewControllers count] != 1) {
         [self initBackButton];
     }
+    else {
+        [self initSidebarButton];
+    }
 }
 
 /**
@@ -107,6 +110,31 @@
 - (void)backButtonClicked
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+/**
+ *  Инициализация кнопки Sidebar
+ */
+- (void)initSidebarButton
+{
+    UIButton *sidebar_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    sidebar_btn.frame = CGRectMake(0, 0, 30, 30);
+    [sidebar_btn setContentMode:UIViewContentModeCenter];
+    [sidebar_btn setImage:[UIImage imageNamed:@"SidebarBtn"] forState:UIControlStateNormal];
+    [sidebar_btn setImage:[UIImage imageNamed:@"SidebarBtnSel"] forState:UIControlStateHighlighted];
+    [sidebar_btn addTarget:self action:@selector(sidebarButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *left_btn = [[UIBarButtonItem alloc] initWithCustomView:sidebar_btn];
+    self.navigationItem.leftBarButtonItem = left_btn;
+}
+
+/**
+ *  Обработка нажатия по кнопке бокового экрана
+ */
+- (void)sidebarButtonClicked
+{
+    // redefine me
+    // ..
 }
 
 #pragma mark - Индикация загрузки данных

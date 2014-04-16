@@ -361,10 +361,10 @@
 				0B1449DA18FDB97400E5F037 /* Pages.storyboard */,
 				0B1449E118FDBF0800E5F037 /* Intro Screen */,
 				0B92132F18FEA74C00B9C733 /* Side Menu */,
-				0B1449D318FDB95500E5F037 /* About Screen */,
-				0B1449D418FDB95500E5F037 /* Feedback Screen */,
-				0B1449D618FDB95500E5F037 /* Presentation Screen */,
 				0B1449D718FDB95500E5F037 /* Settings Screen */,
+				0B1449D618FDB95500E5F037 /* Presentation Screen */,
+				0B1449D418FDB95500E5F037 /* Feedback Screen */,
+				0B1449D318FDB95500E5F037 /* About Screen */,
 			);
 			path = Pages;
 			sourceTree = "<group>";

@@ -15,6 +15,7 @@
 
 - (void)initialize;
 - (void)backButtonClicked;
+- (void)sidebarButtonClicked;
 
 /// -----------------------------------------------------------------------
 /// @name Indicating loading process

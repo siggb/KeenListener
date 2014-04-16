@@ -65,8 +65,8 @@
                                        forBarMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setTitleTextAttributes:
-     @{NSFontAttributeName:DefaultLightFont(17),
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+     @{NSFontAttributeName:DefaultRegularFont(21),
+       NSForegroundColorAttributeName:BlueColor}];
     
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:0.f
