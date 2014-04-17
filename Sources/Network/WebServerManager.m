@@ -42,7 +42,7 @@
     [self.webServer start];
     
     [SettingsManagerInstance setServerURL:self.webServer.serverURL];
-    [SettingsManagerInstance setServerPort:[self.webServer.serverURL port]];
+    [SettingsManagerInstance setServerPort:@([self.webServer port])];
     [SettingsManagerInstance setServerAddress:[self.webServer.serverURL host]];
     [SettingsManagerInstance setServerDirectoryPath:@"/var/user/applications/keenlistener/.."];
 }
