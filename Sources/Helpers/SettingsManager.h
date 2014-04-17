@@ -13,7 +13,7 @@
 @property (nonatomic) NSURL * serverURL;
 
 @property (nonatomic) NSString * serverAddress;
-@property (nonatomic) NSString * serverPort;
+@property (nonatomic) NSNumber * serverPort;
 @property (nonatomic) NSString * serverDirectoryPath;
 
 @property (nonatomic) BOOL * isServerLaunched;

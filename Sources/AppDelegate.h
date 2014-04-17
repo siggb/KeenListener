@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class WebServerManager;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+/** Web Server Instance */
+@property (strong, nonatomic) WebServerManager *webServerInstance;
 
 @end

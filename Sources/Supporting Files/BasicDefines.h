@@ -56,5 +56,6 @@
 #define APP_STORYBOARD_NAME                 @"Pages"
 
 #define SettingsManagerInstance             [SettingsManager instance]
+#define WebServerInstance                   [ApplicationDelegate webServerInstance]
 
 #endif

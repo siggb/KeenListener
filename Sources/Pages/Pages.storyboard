@@ -185,7 +185,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="192.168.10.68" borderStyle="line" placeholder="not detected" textAlignment="center" minimumFontSize="17" id="NZZ-Gv-X8v">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="192.168.10.68" borderStyle="line" textAlignment="center" minimumFontSize="17" id="NZZ-Gv-X8v">
                                         <rect key="frame" x="160" y="185" width="139" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -201,7 +201,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="/var/user/applications/" borderStyle="line" placeholder="not detected" textAlignment="center" minimumFontSize="17" id="Tbk-gg-Kfg">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="/var/user/applications/" borderStyle="line" textAlignment="center" minimumFontSize="17" id="Tbk-gg-Kfg">
                                         <rect key="frame" x="160" y="290" width="139" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -209,7 +209,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="8080" borderStyle="line" placeholder="not detected" textAlignment="center" minimumFontSize="17" id="Wpo-cj-sLW">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="8080" borderStyle="line" textAlignment="center" minimumFontSize="17" id="Wpo-cj-sLW">
                                         <rect key="frame" x="160" y="235" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -259,6 +259,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="j7G-fo-Baw"/>
                     <connections>
+                        <outlet property="addressField" destination="NZZ-Gv-X8v" id="ZBE-00-y1Q"/>
+                        <outlet property="directoryField" destination="Tbk-gg-Kfg" id="0aO-K4-9mp"/>
+                        <outlet property="portField" destination="Wpo-cj-sLW" id="xSX-Rs-f8W"/>
+                        <outlet property="serverStatusLabel" destination="C0f-ZG-8jg" id="S8X-Gl-fwQ"/>
                         <outlet property="startButton" destination="nP5-2x-qnq" id="Wyk-YQ-p0p"/>
                         <outlet property="stopButton" destination="82h-Vj-st6" id="Tuq-h2-hMT"/>
                     </connections>

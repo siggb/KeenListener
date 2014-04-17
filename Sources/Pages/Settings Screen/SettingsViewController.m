@@ -7,15 +7,16 @@
 //
 
 #import "SettingsViewController.h"
-#import "GCDWebUploader.h"
 
 #define LOG_ON 1
+#define kServerStatusIdle       @"IDLE"
+#define kServerStatusRuning     @"RUNNING"
 
-@interface SettingsViewController () <GCDWebUploaderDelegate>
-
-@property (nonatomic) GCDWebUploader *webServer;
+@interface SettingsViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton *startButton, *stopButton;
+@property (nonatomic, weak) IBOutlet UITextField *addressField, *portField, *directoryField;
+@property (nonatomic, weak) IBOutlet UILabel *serverStatusLabel;
 
 @end
 
@@ -28,12 +29,52 @@
     self.title = @"Settings";
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.addressField setUserInteractionEnabled:NO];
+    [self.portField setUserInteractionEnabled:NO];
+    [self.directoryField setUserInteractionEnabled:NO];
+    
+    [self.addressField setText:@""];
+    [self.portField setText:@""];
+    [self.directoryField setText:@""];
+    
+    [self.serverStatusLabel setText:kServerStatusIdle];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-//    [self.startButton setEnabled:YES];    
-//    [self.stopButton setEnabled:NO];
+    [self updateServerAppearence];
+}
+
+#pragma mark - Private Class Methods
+
+- (void)updateServerAppearence
+{
+    if ([WebServerInstance isRunning]) {
+        [self.startButton setEnabled:NO];
+        [self.stopButton setEnabled:YES];
+        
+        [self.addressField setText:[SettingsManagerInstance serverAddress]];
+        [self.portField setText:[[SettingsManagerInstance serverPort] stringValue]];
+        [self.directoryField setText:[SettingsManagerInstance serverDirectoryPath]];
+        
+        [self.serverStatusLabel setText:kServerStatusRuning];
+    }
+    else {
+        [self.startButton setEnabled:YES];
+        [self.stopButton setEnabled:NO];
+        
+        [self.addressField setText:@""];
+        [self.portField setText:@""];
+        [self.directoryField setText:@""];
+        
+        [self.serverStatusLabel setText:kServerStatusIdle];
+    }
 }
 
 #pragma mark - User Interaction Methods
@@ -44,19 +85,9 @@
     
     [self showScreenLoadingWithText:@"Server launched"];
     
-    if (self.webServer == nil) {
-        NSString* documents_path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-        self.webServer = [[GCDWebUploader alloc] initWithUploadDirectory:documents_path];
-        self.webServer.delegate = self;
-        self.webServer.showHiddenFiles = YES;
-    }
+    [WebServerInstance start];
     
-    [self.webServer start];
-    
-    [self.startButton setEnabled:NO];
-    [self.stopButton setEnabled:YES];
-    
-    [SettingsManagerInstance setServerURL:self.webServer.serverURL];
+    [self updateServerAppearence];
     
     [self hideLoadingWithDelay:1.f];
 }
@@ -65,35 +96,12 @@
 {
     DPLog(LOG_ON, @"");
     
-    [self.webServer stop];
+    [WebServerInstance stop];
     
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:NO];
+    [self updateServerAppearence];
     
     [self showScreenLoadingWithText:@"Server stoped"];
     [self hideLoadingWithDelay:1.f];
-}
-
-#pragma mark - GCDWebUploader Delegate Methods
-
-- (void)webUploader:(GCDWebUploader*)uploader didUploadFileAtPath:(NSString*)path
-{
-    DPLog(LOG_ON, @"[UPLOAD] %@", path);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath
-{
-    DPLog(LOG_ON, @"[MOVE] %@ -> %@", fromPath, toPath);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didDeleteItemAtPath:(NSString*)path
-{
-    DPLog(LOG_ON, @"[DELETE] %@", path);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didCreateDirectoryAtPath:(NSString*)path
-{
-    DPLog(LOG_ON, @"[CREATE] %@", path);
 }
 
 @end

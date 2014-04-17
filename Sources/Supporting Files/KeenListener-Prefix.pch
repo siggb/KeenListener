@@ -24,7 +24,7 @@
 #import "RESideMenu.h"
 
 
-// Base Headers
+// Base Headers and Elements
 #import "AppDelegate.h"
 #import "GitVersion.h"
 #import "BasicDefines.h"
@@ -36,6 +36,7 @@
 #import "DatesHelper.h"
 #import "DialogHelper.h"
 #import "SettingsManager.h"
+#import "WebServerManager.h"
 
 
 // Custom Elements

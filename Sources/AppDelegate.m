@@ -10,6 +10,16 @@
 
 @implementation AppDelegate
 
+- (id)init
+{
+	if ((self = [super init]))
+    {
+        // initialising main server instance
+        self.webServerInstance = [WebServerManager new];
+    }
+    return self;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
