@@ -14,13 +14,6 @@ It is a server-side application for the interaction between speaker and listener
 * iOS 7.0 or higher
 * ARC
 
-### Example Usage
-
-```objective-c
-// Coming soon
-// ...
-```
-
 ### License
 
 Keen Listener is available under the MIT license.
